@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+
+
+#main-content {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    position: relative;
+}
+
+
+
+h1 {
+    margin-top: 100px;
+
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    font-size: 64px;
+
+}
+
+
+
+p {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+
+    text-align: justify;
+    font-family: sans-serif;
+    font-size: 24px;
+}
+
+
+
+#links {
+    width: 70%;
+    margin: 64px auto;
+    
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+
+a {
+    display: block;
+    
+    text-decoration: none;
+    color: #333;
+    background-color: bisque;
+    padding: 16px 32px;
+    margin: 0;
+    border-radius: 16px;
+    
+    font-size: 24px;
+    
+    font-family: sans-serif;
+}
+
+
+
+#poetry {
+    background-color:#ec9786;
+}
+
+#poetry:hover {
+    background: #ebab91;
+}
+
+
+
+#fil {
+    background-color:#cd5f69;
+}
+
+#fil:hover {
+    background:#e54c51;
+}
+
+
+#en {
+    background-color:#c93749;
+}
+
+#en:hover {
+    background: #e54c51
+}
+
+
+
+footer {
+    width: 100%;
+    background: rgb(174, 174, 174);
+    height: 10%;
+
+    position: absolute;
+
+    bottom: 0;
+
+    padding: 16px 0;
+}
+
+footer p {
+    text-align: justify;
+    font-family: sans-serif;
+    font-size: 16px;
+
+}
