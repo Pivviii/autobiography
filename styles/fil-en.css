@@ -6,6 +6,7 @@
 body {
     margin: 0;
     padding: 0;
+    background: rgb(224, 211, 175);
 }
 
 
@@ -14,7 +15,7 @@ body {
     margin: 0 auto;
     text-align: justify;
     font-size: 24px;
-
+    backdrop-filter: blur(4px);
     position: relative;
 }
 
@@ -44,9 +45,14 @@ p {
     top: 0px;
     font-size: 36px;
     color: black;
+    transition: transform 50ms ease-out;
 }
 
 #back:hover {
-color: rgb(102, 102, 102);
+    color: rgb(102, 102, 102);
+    transform: scale(1.05);
 }
 
+#back:active {
+    transform: scale(1);
+}

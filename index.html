@@ -1,32 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/styles/landing.css">
-        <title>BETITO</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/landing.css">
+    <title>BETITO</title>
+</head>
 
-    <body>
-        <div id="main-content">
-            <h1>WELCOME!</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, minus omnis accusantium cupiditate nam saepe
-                excepturi perferendis aliquam voluptas sapiente, ab iure doloribus esse quaerat. Dolores iure hic omnis sunt.
-                Quaerat, cumque. Enim iste, consectetur ut alias dolore optio assumenda nulla doloribus delectus laudantium
-                minima inventore earum quo dignissimos maxime cupiditate eos ratione laborum, voluptate, esse architecto!
-                Expedita, enim et necessitatibus nostrum eius totam assumenda doloremque animi nihil minima quo voluptates
-                beatae vel officia sequi sed fugiat doloribus veniam numquam quae maiores, tempore excepturi! Mollitia ullam
-                maxime pariatur dicta a cumque voluptas porro et saepe exercitationem, ratione, nam cupiditate veniam!</p>
-            <div id="links">
-                <a id="poetry" href="">POETRY COLLECTION</a>
-                <a id="fil" href="/fil.html">FILIPINO VERSION</a>
-                <a id="en" href="/en.html">ENGLISH VERSION</a>
-            </div>
-            <footer>
-                <p>CREDITS:</p>
-            </footer>
+<body>
+    <div id="main-content">
+        <h1>WELCOME!</h1>
+        <img src="/images/profile.jpg" width="200px" height="200px" alt="My Face">
+        <p id="welcome">Hello! I am <strong>Hanna Jane P. Betito, an ABS 2-1 student</strong>, and this is my website.
+            This website was created solely
+            for a performance task in Pagsasalin sa Kontekstong Filipino. All text on this website is purely my own,
+            including the translations you will encounter. It includes my autobiography in both English and Filipino, as
+            well as a collection of my poetry, which showcases my talent as part of the requirements. I hope you find
+            this website interesting and enjoyable to explore!!!
+        </p>
+        <div id="links">
+            <a id="poetry" href="/poetry.html">POETRY COLLECTION</a>
+            <a id="fil" href="/fil.html">FILIPINO VERSION</a>
+            <a id="en" href="/en.html">ENGLISH VERSION</a>
         </div>
-    </body>
+        <button type="button" id="translate" onclick="translateParagraph()">Translate</button>
+        <footer class="footer">
+
+            <p class="footer-text">
+                © 2026 Hanna Jane P. Betito. All rights reserved.
+            </p>
+
+            <p class="footer-subtext">
+                This website was created for a performance task in <i>Pagsasalin sa Kontekstong Filipino</i>.
+            </p>
+
+            <p class="footer-subtext">
+                All written content is original and created by the author. Background images are not owned and are used
+                for aesthetic purposes only.
+            </p>
+
+            <p class="footer-thanks">
+                Special thanks to <span class="footer-name">Alexander T. Gracilla</span> for helping with the developmenmt of this website.
+            </p>
+        </footer>
+    </div>
+    <script>
+        const paragraph = document.querySelector("#welcome")
+        let isEnglish = true
+        const english = `<p id="welcome">Hello! I am <strong>Hanna Jane P. Betito, an ABS 2-1 student</strong>, and this is my website. This website was created solely
+            for a performance task in Pagsasalin sa Kontekstong Filipino. All text on this website is purely my own,
+            including the translations you will encounter. It includes my autobiography in both English and Filipino, as
+            well as a collection of my poetry, which showcases my talent as part of the requirements. I hope you find
+            this website interesting and enjoyable to explore!!!
+        </p>`
+
+        const filipino = `<p id="welcome">Kamusta! Ako si <strong>Hanna Jane P. Betito</strong>, isang mag-aaral mula sa ABS 2-1, at ito ang aking website.
+            Ang website na ito ay ginawa lamang para sa isang performance task sa Pagsasalin sa Kontekstong Filipino.
+            Lahat ng mga sulat dito ay mula sa aking sariling gawa kasama ang mga pagsasaling inyong makikita. Kabilang
+            sa mga nilalaman nito ang aking talambuhay sa parehong Ingles at Filipino, pati na rin ang koleksyon ng
+            aking mga tula na nagpapakita ng aking talento bilang isa sa mga kinakailangan para sa gawain. Umaasa ako na
+            kayo'y mawiwili at matutuwa sa paglilibot sa website na ito!
+        </p>`
+        function translateParagraph() {
+            console.log("Clicked")
+            if (isEnglish) {
+                isEnglish = false
+                paragraph.innerHTML = filipino
+            } else {
+                isEnglish = true
+                paragraph.innerHTML = english
+            }
+        }
+    </script>
+</body>
 
 </html>

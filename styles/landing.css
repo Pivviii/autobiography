@@ -6,23 +6,29 @@ body {
     margin: 0;
     padding: 0;
     width: 100vw;
-    height: 100vh;
-    overflow-y: hidden;
+    /* height: 100vh; */
+    overflow-x: hidden;
+    background: url("/images/landing.jpg");
+    background-position: top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
 
 #main-content {
     width: 100%;
-    height: 100%;
-    overflow-y: hidden;
+    min-height: 100vh;
+    overflow-y: scroll;
     position: relative;
+    backdrop-filter: blur(4px);
 }
 
 
 
 h1 {
-    margin-top: 100px;
+    margin-top: 50px;
 
     text-align: center;
     font-family: Helvetica, sans-serif;
@@ -30,7 +36,12 @@ h1 {
 
 }
 
-
+img {
+    display: block;
+    width: 200px;
+    aspect-ratio: 1/1;
+    margin: 32px auto;
+}
 
 p {
     display: block;
@@ -47,75 +58,134 @@ p {
 #links {
     width: 70%;
     margin: 64px auto;
-    
+
     display: flex;
     justify-content: space-between;
-    
+    margin-bottom: 200px;
 }
 
 
 
 a {
     display: block;
-    
+
     text-decoration: none;
     color: #333;
     background-color: bisque;
     padding: 16px 32px;
     margin: 0;
     border-radius: 16px;
-    
+
     font-size: 24px;
-    
+    transition: transform 50ms ease-out;
     font-family: sans-serif;
 }
 
 
 
 #poetry {
-    background-color:#ec9786;
+    background-color: rgb(252, 143, 160);
 }
 
 #poetry:hover {
-    background: #ebab91;
+    background: rgb(255, 167, 180);
 }
 
 
 
 #fil {
-    background-color:#cd5f69;
+    background-color:rgb(253, 80, 108);
 }
 
 #fil:hover {
-    background:#e54c51;
+    background: rgb(249, 96, 121);
 }
 
 
 #en {
-    background-color:#c93749;
+    background-color: #fe2d2d;
 }
 
 #en:hover {
-    background: #e54c51
+    background: rgb(251, 81, 81);
 }
 
+
+a:hover {
+    transform: scale(1.05);
+    
+}
+
+a:active {
+    transform: scale(1);
+}
+
+
+
+
+button {
+    position: absolute;
+    top: 32px;
+    right: 64px;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 16px;
+    background-color: rgb(238, 131, 149);
+    transition: transform 50ms ease-out;
+}
+
+button:hover {
+    background-color: #f4a8ae;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(1);
+}
 
 
 footer {
     width: 100%;
-    background: rgb(174, 174, 174);
-    height: 10%;
-
+    background: rgba(254, 206, 206, 0.627);
+    height: 15vh;
+    padding: 1rem 2rem;
     position: absolute;
 
     bottom: 0;
 
-    padding: 16px 0;
+    padding: 10px 0;
+    border-top: 1px solid #aaa;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 footer p {
-    text-align: justify;
-    font-family: sans-serif;
-    font-size: 16px;
+    font-size: 20px;
+    text-align: center;
+}
 
+.footer-text {
+    margin: 4px 0;
+}
+
+/* Subtext / description */
+.footer-subtext {
+    margin: 4px 0;
+    font-size: 0.6em;
+    color: #555;
+}
+
+/* Special thanks section */
+.footer-thanks {
+    margin: 5px 0;
+    font-size: 0.6em;
+    color: #666;
+}
+
+/* Highlighted name */
+.footer-name {
+    font-weight: bold;
 }
